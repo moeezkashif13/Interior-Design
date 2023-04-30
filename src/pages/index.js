@@ -1,118 +1,439 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+
+import {Navbar, Footer,Getintouch,SectionIntro,Whatweuse } from '@/components/smallcomponents';
+
+import anime from 'animejs';
+import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
+import Image from 'next/image'
+import { useEffect, useRef } from 'react'
+
+
 
 export default function Home() {
+
+
+useEffect(()=>{
+
+
+//   var words = [
+
+//     "TAILORED FURNITURE & INTERIOR DESIGN SERVICES"
+//   ],
+//   part,
+//   i = 0,
+//   offset = 0,
+//   len = words.length,
+//   forwards = true,
+//   skip_count = 0,
+//   skip_delay = 15,
+//   speed = 70;
+
+// const intervalFunc =   setInterval(function () {
+//     if (forwards) {
+//       if (offset >= words[i].length) {
+//         ++skip_count;
+//         if (skip_count == skip_delay) {
+//           forwards = false;
+//           skip_count = 0;
+//         }
+//       }
+//     } else {
+//       if (offset == 0) {
+//         forwards = true;
+//         i++;
+//         offset = 0;
+//         if (i >= len) {
+//           i = 0;
+//         }
+//       }
+//     }
+//     part = words[i].substr(0, offset);
+//     if (skip_count == 0) {
+//       if (forwards) {
+//         offset++;
+//       } 
+//       // else {
+//       //   offset--;
+//       // }
+//     }
+    
+//     document.querySelector(".word").innerText = part;
+//   }, speed);
+
+  
+
+
+
+
+
+
+
+  // return () => {
+  //   clearInterval(intervalFunc);
+  // };
+
+
+
+
+},[])
+
+
+
+useEffect(()=>{
+
+  const common = {
+    easing: 'easeInOutQuad',
+
+  } 
+
+  anime({
+    targets: '.borderWidth',
+    width: '100%', // -> from '28px' to '100%',
+    ...common
+  });
+
+  anime({
+    targets: '.borderHeight',
+    height: '100%', // -> from '28px' to '100%',
+    ...common
+  });
+
+
+},[])
+
+
+
+const text = "AT NEXT CONCEPT DESIGN, WE OFFER INTERIOR DESIGN AND TAILORED FURNITURE SERVICES, GUARANTEEING THAT THE FINAL PRODUCT TO EXCEED YOUR EXPECTATIONS. "
+
+// const transformingText = text.split(" ");
+
+// console.log(transformingText);
+
+// const mapped = transformingText.map(eachWord=>{
+
+//   const splitEachWord = eachWord.split("")
+
+//     return <span className='word mr-4' style={{display:'inline-block'}}>
+//         {splitEachWord.map(eachChar=>{
+//             return <span className='char opacity-30' style={{display:'inline-block'}}>{eachChar}</span>
+//         })}
+//     </span>
+
+// })
+
+
+
+// useMotionValueEvent(scrollY, "change", (latest) => {
+//   console.log("Page scroll: ", latest)
+
+//  console.log( document.querySelectorAll('.char'));
+
+
+// })
+
+
+
+
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/pages/index.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+    
+<div className='bg-primary px-common text-white'>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+{/* NAVBAR */}
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+<Navbar/>
+
+
+
+{/* NAVBAR */}
+
+
+
+<div className='pt-48'>
+
+
+<h1 className=' text-[6.2rem] leading-[7rem] font-medium  word'>TAILORED FURNITURE & INTERIOR DESIGN SERVICES</h1>
+
+
+
+<div className='flex mt-12 mb-16'>
+
+<div className='ml-auto flex  justify-end'>
+
+<p className='w-1/2 text-lg'>When you need a professional interior design for your home, you want to work with designers who truly understand you.</p>
+
+
+<div className='flex uppercase self-start text-sm gap-x-10'>
+  <a  className='py-1.5 px-5 rounded-3xl bg-white'  href='#!'>Get in touch <span>arr</span></a>
+  <a  className='py-1.5 px-5 rounded-3xl border '  href='#!'>services <span>arr</span> </a>
+</div>
+
+
+</div>
+
+
+</div>
+
+
+<div className='w-full h-[600px] bg-orange-500'></div>
+
+
+
+
+</div>
+
+
+
+{/* SECTION START */}
+
+<div className=' pt-40 '>
+
+
+<SectionIntro  number={1} text={"What we do  &  About us"} />
+
+
+<p className='font-medium text-[4.2rem] mt-6 mb-12 leading-[4.7rem]'>
+{/* AT NEXT CONCEPT DESIGN, WE OFFER INTERIOR DESIGN AND TAILORED FURNITURE SERVICES, GUARANTEEING THAT THE FINAL PRODUCT TO EXCEED YOUR EXPECTATIONS. */}
+
+
+{text}
+
+
+</p>
+
+
+
+<div className='flex gap-x-6 border-t border-b py-6'>
+
+
+
+<div className='w-1/2  h-[500px] '>
+
+    <div className='w-full h-full bg-purple-500 rounded-2xl'>
+
+    <img src='https://uploads-ssl.webflow.com/63cc467bfbf4f5ebbd16107a/63d10ba4e4971439077bda6f_Kitchen%206-p-1080.webp'  className='w-full max-w-full h-full object-cover' />
+
+    </div>
+
+  
+</div>
+
+
+
+<div className='w-0.5  bg-third'></div>
+
+
+<div className='w-1/2 text-primary pr-24 flex flex-col justify-between'>
+
+<h2 className='uppercase text-2xl font-medium '>
+WE ARE PROUD OF OUR TEAM OF DESIGNERS, PLANNERS AND CRAFTSMEN, CAPABLE OF REALISING ANY PROJECT, REGARDLESS OF COMPLEXITY.
+
+</h2>
+
+<div className='text-[1.05rem] font-light flex flex-col gap-y-6'> 
+
+<p>We are dedicated to offering quality, durable and aesthetically pleasing products, at an optimal quality-price ratio. We like to work in close collaboration with our clients, to ensure that we understand and respect their needs and ideas, so that we can deliver a final product that exceeds their expectations.
+</p>
+
+<p>In addition, through our interior design services, we ensure that the furniture and the general design complement each other harmoniously, creating a pleasant and functional environment.
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+<div className='flex gap-x-10 text-sm'>
+
+{[1,2].map(()=>{
+
+return <a href='#!' className='bg-white uppercase px-7  py-2 rounded-2xl' >
+  Read More <span>arr</span>
+</a>
+
+})}
+
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+{/* SECTION ENDDD*/}
+
+
+
+{/* SECTION START */}
+
+
+
+<div className='pt-28'>
+
+
+
+<SectionIntro  number={2} text="Projects" includeSecond={true} secondSectHeading="OUR LATEST WORKS
+" secondSectText="Each project is custom tailored, based on each client needs. We are ready to take on any kind of projects, be that small or complex." />
+
+
+
+
+
+<div className='py-20 '>
+
+
+{[1,2,3,4].map(()=>{
+  return <div className='border-t-orange-500 last:border-b-orange-500 last:border-b border-t  flex flex-wrap'>
+
+
+{[1,2].map(()=>{
+  return   <div className='w-1/2 odd:border-r odd:border-r-yellow-500 odd:pr-6 even:pl-6  my-6'>
+
+        <div className='w-full h-[332px] bg-pink-500 rounded-2xl'></div>
+
+<div className='pl-2'>
+
+<div className='flex pt-8'>
+
+<p className='uppercase text-third'>kitchen design</p>
+
+<p className='ml-auto text-primary'>2023</p>
+
+</div>
+
+
+<div className='flex text-primary items-center'>
+
+<p className='text-2xl font-medium'>ELEGANT CASHMERE KITCHEN</p>
+
+
+<a href='#!' className='ml-auto px-6 bg-white  self-start  rounded-3xl'>View</a>
+
+
+</div>
+
+
+
+</div>
+
+
+
+  </div>
+})}
+
+  
+  
+  
+
+  </div>
+
+
+})}
+
+
+<div className='flex justify-center text-sm mt-10'>
+<a href="#!"  className=' uppercase px-5 text-black py-2 rounded-3xl bg-white' >View All Projects <span>arr</span> </a>
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+{/* SECTION ENDDD*/}
+
+
+
+
+{/* SECTIONN STARTTTT */}
+
+<div className='mt-6'>
+
+<Whatweuse/>
+
+</div>
+
+
+{/* SECTIONNN ENDDDD */}
+
+
+
+
+
+{/* SECTIONNN STARTTTT */}
+
+
+<div>
+
+<Getintouch/>
+
+
+</div>
+
+
+
+
+
+{/* SECTIONNN ENDDDD */}
+
+
+
+{/* SECTIONNN STARTTT */}
+
+<div className='pb-8'>
+
+
+<Footer/>
+
+
+</div>
+
+
+
+
+
+
+{/* SECTIONNN ENDDDD */}
+
+
+
+
+</div>
+
+
+
   )
 }
