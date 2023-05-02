@@ -1,16 +1,23 @@
 import '@/styles/globals.css'
 
 
-import {Epilogue} from 'next/font/google'
+import localFont from 'next/font/local'
 
 
-const epilogue = Epilogue({ subsets: ['latin'],   variable: '--font-epilogue',
-})
+const SatoshiFont = localFont({ src: './Satoshi-Variable.woff2', })
+
+
+
+// import {Epilogue} from 'next/font/google'
+
+
+// const epilogue = Epilogue({ subsets: ['latin'],   variable: '--font-epilogue',
+// })
 
 
 
 export default function App({ Component, pageProps }) {
-  return       <main className={`${epilogue.variable} font-sans`}>
+  return       <main className={SatoshiFont.className} >
 
   <Component {...pageProps} />
 </main>

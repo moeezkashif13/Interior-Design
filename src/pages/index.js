@@ -137,7 +137,7 @@ const text = "AT NEXT CONCEPT DESIGN, WE OFFER INTERIOR DESIGN AND TAILORED FURN
   return (
 
     
-<div className='bg-primary px-common text-white'>
+<div className='bg-primary px-desktopPadding text-white'>
 
 
 {/* NAVBAR */}

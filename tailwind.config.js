@@ -1,8 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 
-const { fontFamily } = require('tailwindcss/defaultTheme')
-
-
 
 module.exports = {
   content: [
@@ -17,9 +14,6 @@ screens:{
   'anothermobile' : '480px',
 },
 
-      fontFamily: {
-        sans: ['var(--font-epilogue)', ...fontFamily.sans],
-      },
 
       borderColor: {
           'primary' :"#3a3a3a",
@@ -33,16 +27,17 @@ screens:{
  
       padding:{
         'mobilePadding' : '16px',
-        'anothermobile' : '22px',
+        'anothermobile' : '32px',
         'tablet' : '40px',
-        'desktopPadding' : '20px'
+        'desktopPadding' : '24px'
       },
 
       colors : {
         'primary' : "#FFF8F1",
         'secondary' : "#DAD4CE",
         "third" : "#ABABAB",
-        "fourth" : "#CCC7C1"
+        "fourth" : "#CCC7C1",
+        "fifth" : "#1D1D1D"
         
       },
 

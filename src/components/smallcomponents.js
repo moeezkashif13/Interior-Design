@@ -22,7 +22,7 @@ export const Navbar = ()=>{
   
     <Link href='/projects' className='px-5 py-1 rounded-[20px] text-primary bg-red-500'>Projects</Link>
   
-    <Link href='/getintouch' className='px-5 py-1 rounded-[20px] text-black bg-secondary'>get in touch <span>arr</span></Link>
+    <Link href='/contactus' className='px-5 py-1 rounded-[20px] text-black bg-secondary'>get in touch <span>arr</span></Link>
   
   
   </div>
@@ -54,9 +54,9 @@ export const Navbar = ()=>{
 
 
       <Link href="/">Home</Link>
-      <Link href="aboutus">about us</Link>
-      <Link href="#!">projects</Link>
-      <Link href="#!" className="text-[1rem] border border-red-500 rounded-full px-5 py-2.5"  >get in touch <span>arr</span></Link>
+      <Link href="/aboutus">about us</Link>
+      <Link href="/projects">projects</Link>
+      <Link href="/contactus" className="text-[1rem] border border-red-500 rounded-full px-5 py-2.5"  >get in touch <span>arr</span></Link>
 
 
 
@@ -166,7 +166,7 @@ export const Getintouch = ({number,extraWidth})=>{
       <p className={`mb-8 lg:mb:0 w-full lg:w-1/2  px-0 lg:pl-20 text-secondary text-[1.05rem]`}>By working with designers who truly understand you, you can feel confident that the end result will be a reflection of your personality and style.
     </p>
     
-    <a href='#!' className=' uppercase bg-yellow-500 self-start px-5 py-2.5 rounded-3xl text-sm'>get in touch <span> &nbsp; arr</span></a>
+    <a href='#!' className=' uppercase bg-white text-black self-start px-5 py-2.5 rounded-3xl text-sm'>get in touch <span>arr</span></a>
     
     
     
@@ -182,12 +182,19 @@ export const Getintouch = ({number,extraWidth})=>{
 
 
 export const Footer = ()=>{
-  return <div className='relative border-secondary   '>
+  return <div className='relative    '>
 
 
   <div className='borderWidth absolute w-0 h-[1px] bg-fourth top-0'></div>
+
+
   <div className='borderHeight hidden lg:block absolute w-[1px] h-full bg-fourth top-0 left-0'></div>
+  
+  
   <div className='borderHeight hidden lg:block absolute w-[1px] h-full bg-fourth top-0 right-0'></div>
+
+
+
   <div className='borderWidth absolute w-0 h-[1px] bg-fourth bottom-0'></div>
   
   
@@ -195,9 +202,9 @@ export const Footer = ()=>{
   
   <div className='flex flex-col lg:flex-row '>
   
-      <div  className='w-full relative border-t border-b border-secondary  py-7 lg:w-1/2   lg:p-6'>
+      <div  className='w-full relative border-t border-b lg:border-none border-secondary  py-7 lg:w-1/2   lg:p-6'>
   
-      <div className='absolute w-[1px] h-0 borderHeight bg-fourth ' style={{top:'50%',right:0,transform:'translate(0%,-50%)'}}></div>
+      <div className='absolute hidden lg:block w-[1px] h-0 borderHeight bg-fourth ' style={{top:'50%',right:0,transform:'translate(0%,-50%)'}}></div>
   
   
   <div >
@@ -216,7 +223,7 @@ export const Footer = ()=>{
   
   <div  className='w-full lg:w-1/4 p-0 lg:p-6  relative '>
   
-  <div className='absolute w-[1px] h-0 borderHeight bg-fourth top-0 right-0'></div>
+  <div className='absolute hidden lg:block w-[1px] h-0 borderHeight bg-fourth top-0 right-0'></div>
   
   
   {/*  */}
@@ -262,7 +269,7 @@ export const Footer = ()=>{
   
   
   
-  <div className='w-full lg:w-1/4 mt-8 lg:mt-0 p-0 lg:p-6 pb-8 border-b border-secondary lg:border-none'>
+  <div className='w-full lg:w-1/4 mt-8 lg:mt-0 p-0 lg:p-6 pb-8 '>
   
   <p className='uppercase  text-[1rem] lg:text-lg text-primary'>QUICK LINKS</p>
   
@@ -274,11 +281,6 @@ export const Footer = ()=>{
   <a href='#!' className='px-5  py-1.5 border border-primary  rounded-2xl'>Works <span>arr</span></a>
       
   <a href='#!' className='px-5  py-1.5 border border-primary  rounded-2xl'>Contact us <span>arr</span></a>
-      
-      {/* <a href='#!' className='px-3.5 text-third  py-1 border border-primary  rounded-2xl'>Home <span>arr</span></a>
-      <a href='#!' className='px-3.5 text-third  py-1 border border-primary  rounded-2xl'>About us <span>arr</span></a>
-      <a href='#!' className='px-3.5 text-third  py-1 border border-primary  rounded-2xl'>Works <span>arr</span></a>
-      <a href='#!' className='px-3.5 text-third  py-1 border border-primary  rounded-2xl'>Contact us <span>arr</span></a> */}
       
       
       </div>
@@ -320,4 +322,36 @@ export const Footer = ()=>{
   
   
   </div>
+}
+
+
+
+export const HeroSectIntro = ()=>{
+
+  return (
+    <div className="py-10  md:py-24 lg:py-44">
+
+
+    <p className="mb-8 text-[1.62rem]  anothermobile:text-[6.5vw] anothermobile:leading-[7.5vw]   font-semibold  lg:text-[4.7vw] lg:leading-[5.5vw]  leading-8">BROWSE OUR PORTFOLIO OF STUNNING WORKS, FROM CONCEPT TO COMPLETION</p>
+
+<div className=" lg:flex">
+
+      <div className=" lg:flex  lg:gap-x-14 lg:w-auto">
+        <p className="text-third lg:w-[35%] font-medium md:text-lg">TRANSFORM YOUR SPACE WITH THE HELP OF OUR EXPERT INTERIOR DESIGNERS AND CRAFTSMEN</p>
+
+        <p className="my-8  lg:my-0 text-secondary lg:w-1/2 md:text-lg md:w-3/4">When it comes to seeking professional interior design services for your home, it is crucial to collaborate with designers who have a deep understanding of your unique style and needs.</p>
+      </div>
+
+      <a href="#!" className="lg:self-end lg:w-64 text-black bg-white px-5 text-sm uppercase py-2.5 rounded-full">get in touch <span>arr</span></a>
+
+
+
+</div>
+
+
+
+    </div>
+  )
+
+
 }
