@@ -2,10 +2,17 @@
 import { Footer,Getintouch,Navbar,SectionIntro,Whatweuse } from '@/components/smallcomponents'
 import {TfiRulerAlt} from 'react-icons/tfi'
 
+import {FiArrowRight} from 'react-icons/fi'
+
 import {AiOutlineArrowRight} from 'react-icons/ai'
+import Link from 'next/link'
+import { useState } from 'react'
 
 
 export default function Aboutus(){
+
+const [valueCheck,setValueCheck] = useState(0)
+
 
     return (
         <div className="bg-primary px-mobilePadding anothermobile:px-anothermobile md:px-tablet lg:px-desktopPadding text-primary">
@@ -18,13 +25,17 @@ export default function Aboutus(){
 
 <div >
 
-<h1 className='text-primary text-[1.7rem] anothermobile:text-[2rem] 
+<h1 className='text-primary text-[1.7rem] anothermobile:text-[2rem]  anothermobile:leading-9 
 
 
 
-md:text-[2.9rem]
+md:text-[6vw] md:leading-[6.5vw]
 
-lg: leading-8 anothermobile:leading-9   font-semibold'>
+lg:text-[4.5vw] lg:leading-[5.5vw]
+
+
+
+lg: leading-8   font-semibold'>
     
     
     
@@ -63,7 +74,7 @@ lg: leading-8 anothermobile:leading-9   font-semibold'>
 
         <div className='w-full h-full'>
 
-        <img  src='/third.webp' className='w-full h-full max-w-full object-cover rounded-2xl' />
+        <img  src='/tenth.webp' className='w-full h-full max-w-full object-cover rounded-2xl' />
 
         </div>
 
@@ -112,7 +123,7 @@ lg: leading-8 anothermobile:leading-9   font-semibold'>
 
 <div className="flex flex-col md:flex-row  gap-y-6  mt-7 py-6 border-t border-b border-secondary">
 
-{['/first.webp','/second.webp'].map((elem)=>{
+{['/twelvth.webp','/eleventh.webp'].map((elem)=>{
     return <div className=" md:w-1/2 md:even:pl-6 md:odd:pr-6 h-[211px] anothermobile:h-[332px] md:h-[210px] lg:h-[332px]  rounded-2xl md:rounded-none md:border-r md:border-secondary">  
 
 <div className='w-full h-full'>
@@ -248,7 +259,7 @@ lg: leading-8 anothermobile:leading-9   font-semibold'>
 
 
 
-<a href="#!" className="self-start bg-yellow-500 uppercase text-sm px-6 py-2.5 rounded-3xl">projects <span>arr</span></a>
+<Link href="/projects" className="flex items-center gap-x-1 self-start bg-secondary text-slate-950 uppercase text-sm px-6 py-2.5 rounded-3xl">projects <span > <FiArrowRight/></span></Link>
 
 
 
@@ -257,11 +268,32 @@ lg: leading-8 anothermobile:leading-9   font-semibold'>
 
 
 
-<div className="md:w-1/2 flex flex-col gap-y-5 mt-12">
+<div  className="md:w-1/2 flex flex-col gap-y-5 mt-12
+
+
+bg-green-500
+
+
+
+
+
+">
     
 
+    <div className="px-5 py-9 flex flex-col gap-y-4 border rounded-lg">
+
+
+    <div className="text-secondary text-5xl"><TfiRulerAlt/></div>
+    
+    
+    <p className="text-xl anothermobile:text-2xl font-semibold">MEASUREMENTS ON SITE</p>
+    
+    <p className='md:text-[1.05rem]'>The first stage of any successful project is to collect accurate information about the space. This is a crucial step in the design process as it allows us to understand the characteristics and limitations of the space and create a design that suits your needs and preferences.</p>
+    
+    </div>
+
 {[1,2,3,4,5].map(()=>{
-    return <div className="px-5 py-9 flex flex-col gap-y-4 border rounded-lg">
+    return <div  className=" bg-blue-500 px-5 py-9 flex flex-col gap-y-4 border rounded-lg">
 
 
     <div className="text-secondary text-5xl"><TfiRulerAlt/></div>

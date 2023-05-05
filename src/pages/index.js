@@ -2,14 +2,21 @@
 
 import {Navbar, Footer,Getintouch,SectionIntro,Whatweuse } from '@/components/smallcomponents';
 
-import anime from 'animejs';
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
 import Image from 'next/image'
 import { useEffect, useRef } from 'react'
+import { EachProject } from './projects';
+
+import {AiOutlineArrowRight} from 'react-icons/ai'
+import Link from 'next/link';
+import Head from 'next/head';
 
 
 
 export default function Home() {
+
+
+
 
 
 useEffect(()=>{
@@ -79,27 +86,6 @@ useEffect(()=>{
 
 
 
-useEffect(()=>{
-
-  const common = {
-    easing: 'easeInOutQuad',
-
-  } 
-
-  anime({
-    targets: '.borderWidth',
-    width: '100%', // -> from '28px' to '100%',
-    ...common
-  });
-
-  anime({
-    targets: '.borderHeight',
-    height: '100%', // -> from '28px' to '100%',
-    ...common
-  });
-
-
-},[])
 
 
 
@@ -136,8 +122,18 @@ const text = "AT NEXT CONCEPT DESIGN, WE OFFER INTERIOR DESIGN AND TAILORED FURN
 
   return (
 
-    
-<div className='bg-primary px-desktopPadding text-white'>
+    <>
+
+<Head>
+
+    <title>Apna Page  {new Date().getMonth()} </title>
+
+
+</Head>
+
+
+
+    <div className="bg-primary px-mobilePadding anothermobile:px-anothermobile md:px-tablet   lg:px-desktopPadding text-primary">
 
 
 {/* NAVBAR */}
@@ -151,23 +147,33 @@ const text = "AT NEXT CONCEPT DESIGN, WE OFFER INTERIOR DESIGN AND TAILORED FURN
 
 
 
-<div className='pt-48'>
+<div className='pt-10 lg:pt-44'>
 
 
-<h1 className=' text-[6.2rem] leading-[7rem] font-medium  word'>TAILORED FURNITURE & INTERIOR DESIGN SERVICES</h1>
+<h1 className=' text-[8.3vw] anothermobile:text-[6.2vw] leading-[9.5vw] anothermobile:leading-[7vw] font-medium  word   lg:text-[6.9vw] lg:leading-[7.5vw]   '>TAILORED FURNITURE & INTERIOR DESIGN SERVICES</h1>
 
 
 
-<div className='flex mt-12 mb-16'>
+<div className='flex mt-8   '>
 
-<div className='ml-auto flex  justify-end'>
-
-<p className='w-1/2 text-lg'>When you need a professional interior design for your home, you want to work with designers who truly understand you.</p>
+<div className=' flex flex-col lg:flex-row   '>
 
 
-<div className='flex uppercase self-start text-sm gap-x-10'>
-  <a  className='py-1.5 px-5 rounded-3xl bg-white'  href='#!'>Get in touch <span>arr</span></a>
-  <a  className='py-1.5 px-5 rounded-3xl border '  href='#!'>services <span>arr</span> </a>
+<p className='text md:w-[85%]  md:text-lg lg:pl-24 lg:pr-12'>When you need a professional interior design for your home, you want to work with designers who truly understand you.</p>
+
+
+<div className='   mt-8 lg:mt-2 flex flex-wrap lg:flex-nowrap   gap-y-5 uppercase self-start text-sm gap-x-10 text-[#333]'>
+
+
+  <Link  className='py-2  px-3 lg:px-0 lg:w-40 lg:justify-center anothermobile:px-5 rounded-3xl flex items-center  bg-white'  href='/contactus'>Get in touch <span className='ml-1 md:ml-2 text-xs'><AiOutlineArrowRight/></span></Link>
+
+
+
+  <Link  className='py-2  px-3 lg:px-0 lg:w-40 lg:justify-center anothermobile:px-5 rounded-3xl border flex items-center text-primary'  href='/about'>services <span className='ml-1 md:ml-2 text-xs'><AiOutlineArrowRight/></span> </Link>
+
+
+
+
 </div>
 
 
@@ -177,7 +183,7 @@ const text = "AT NEXT CONCEPT DESIGN, WE OFFER INTERIOR DESIGN AND TAILORED FURN
 </div>
 
 
-<div className='w-full h-[600px] bg-orange-500'></div>
+<div className='mt-12 w-full h-[450px] lg:h-[600px] rounded-lg  bg-orange-500'></div>
 
 
 
@@ -188,13 +194,13 @@ const text = "AT NEXT CONCEPT DESIGN, WE OFFER INTERIOR DESIGN AND TAILORED FURN
 
 {/* SECTION START */}
 
-<div className=' pt-40 '>
+<div className=' pt-20 '>
 
 
 <SectionIntro  number={1} text={"What we do  &  About us"} />
 
 
-<p className='font-medium text-[4.2rem] mt-6 mb-12 leading-[4.7rem]'>
+<p className='font-semibold text-[1.4rem] anothermobile:text-[2rem] anothermobile:leading-[2.5rem]   md:text-[2.6rem] md:leading-[3.2rem] lg:text-[3.8rem] lg:leading-[4.3rem]    mt-6 mb-12 '>
 {/* AT NEXT CONCEPT DESIGN, WE OFFER INTERIOR DESIGN AND TAILORED FURNITURE SERVICES, GUARANTEEING THAT THE FINAL PRODUCT TO EXCEED YOUR EXPECTATIONS. */}
 
 
@@ -205,15 +211,15 @@ const text = "AT NEXT CONCEPT DESIGN, WE OFFER INTERIOR DESIGN AND TAILORED FURN
 
 
 
-<div className='flex gap-x-6 border-t border-b py-6'>
+<div className='flex flex-col-reverse lg:flex-row gap-x-6 border-t border-b border-secondary py-6'>
 
 
 
-<div className='w-1/2  h-[500px] '>
+<div className='lg:w-1/2  h-[58vw] lg:h-[500px] '>
 
-    <div className='w-full h-full bg-purple-500 rounded-2xl'>
+    <div className='w-full h-full  '>
 
-    <img src='https://uploads-ssl.webflow.com/63cc467bfbf4f5ebbd16107a/63d10ba4e4971439077bda6f_Kitchen%206-p-1080.webp'  className='w-full max-w-full h-full object-cover' />
+    <img src='https://uploads-ssl.webflow.com/63cc467bfbf4f5ebbd16107a/63d10ba4e4971439077bda6f_Kitchen%206-p-1080.webp'  className='w-full max-w-full h-full object-cover rounded-lg' />
 
     </div>
 
@@ -222,19 +228,19 @@ const text = "AT NEXT CONCEPT DESIGN, WE OFFER INTERIOR DESIGN AND TAILORED FURN
 
 
 
-<div className='w-0.5  bg-third'></div>
+<div className='w-0.5  bg-fourth'></div>
 
 
-<div className='w-1/2 text-primary pr-24 flex flex-col justify-between'>
+<div className='lg:w-1/2 text-primary flex flex-col justify-between'>
 
-<h2 className='uppercase text-2xl font-medium '>
+<h2 className='uppercase text-xl lg:text-2xl font-medium '>
 WE ARE PROUD OF OUR TEAM OF DESIGNERS, PLANNERS AND CRAFTSMEN, CAPABLE OF REALISING ANY PROJECT, REGARDLESS OF COMPLEXITY.
 
 </h2>
 
-<div className='text-[1.05rem] font-light flex flex-col gap-y-6'> 
+<div className='text-[1.05rem] lg:text-[1.15rem] font-light flex flex-col '> 
 
-<p>We are dedicated to offering quality, durable and aesthetically pleasing products, at an optimal quality-price ratio. We like to work in close collaboration with our clients, to ensure that we understand and respect their needs and ideas, so that we can deliver a final product that exceeds their expectations.
+<p className='mt-8 mb-8 lg:mt-0'>We are dedicated to offering quality, durable and aesthetically pleasing products, at an optimal quality-price ratio. We like to work in close collaboration with our clients, to ensure that we understand and respect their needs and ideas, so that we can deliver a final product that exceeds their expectations.
 </p>
 
 <p>In addition, through our interior design services, we ensure that the furniture and the general design complement each other harmoniously, creating a pleasant and functional environment.
@@ -249,16 +255,16 @@ WE ARE PROUD OF OUR TEAM OF DESIGNERS, PLANNERS AND CRAFTSMEN, CAPABLE OF REALIS
 
 
 
-<div className='flex gap-x-10 text-sm'>
+<div className='flex gap-x-10 text-xs anothermobile:text-sm py-8 '>
 
-{[1,2].map(()=>{
 
-return <a href='#!' className='bg-white uppercase px-7  py-2 rounded-2xl' >
-  Read More <span>arr</span>
-</a>
+<Link href='/aboutus' className='bg-secondary flex items-center uppercase  px-6 py-3 anothermobile:py-2.5 text-[#333333] rounded-full' >
+  Read More <span className='ml-1 text-xs'><AiOutlineArrowRight/></span>
+</Link>
 
-})}
-
+<Link href='/projects' className='border-[#555] border text-primary flex items-center uppercase  px-6 py-3 anothermobile:py-2.5  rounded-full' >
+  Projects <span className='ml-1 text-xs'><AiOutlineArrowRight/></span>
+</Link>
 
 
 </div>
@@ -289,7 +295,7 @@ return <a href='#!' className='bg-white uppercase px-7  py-2 rounded-2xl' >
 
 
 
-<div className='pt-28'>
+<div className='pt-12'>
 
 
 
@@ -300,46 +306,44 @@ return <a href='#!' className='bg-white uppercase px-7  py-2 rounded-2xl' >
 
 
 
-<div className='py-20 '>
-
-
-{[1,2,3,4].map(()=>{
-  return <div className='border-t-orange-500 last:border-b-orange-500 last:border-b border-t  flex flex-wrap'>
+<div className='mt-10 '>
 
 
 {[1,2].map(()=>{
-  return   <div className='w-1/2 odd:border-r odd:border-r-yellow-500 odd:pr-6 even:pl-6  my-6'>
+  return <div className='md:flex '>
 
-        <div className='w-full h-[332px] bg-pink-500 rounded-2xl'></div>
-
-<div className='pl-2'>
-
-<div className='flex pt-8'>
-
-<p className='uppercase text-third'>kitchen design</p>
-
-<p className='ml-auto text-primary'>2023</p>
-
-</div>
+{[1,2].map((elem,index)=>{
+  return   <div className={`md:w-1/2 pt-7 border-t 
 
 
-<div className='flex text-primary items-center'>
+  ${index==0&&'relative md:pr-6 '} ${index==1&&'md:pl-6'}
+  
+  
+  
+  
+  border-secondary pb-12 `}>
+    
+    {index==0&&(
+    <div className=" hidden md:block absolute w-[0.5px]  top-0 right-0 h-[90%]  bg-fourth" style={{top:'50%',transform:'translateY(-50%)'}}></div>
+ )}
 
-<p className='text-2xl font-medium'>ELEGANT CASHMERE KITCHEN</p>
-
-
-<a href='#!' className='ml-auto px-6 bg-white  self-start  rounded-3xl'>View</a>
-
-
-</div>
-
-
-
-</div>
-
-
-
+<Link href="/projects/sampleproject">
+    
+    <EachProject
+  
+  
+  
+  special={true}  nomargin={true} />    
+  
+  </Link>
+  
+  
   </div>
+
+
+
+
+
 })}
 
   
@@ -352,8 +356,8 @@ return <a href='#!' className='bg-white uppercase px-7  py-2 rounded-2xl' >
 })}
 
 
-<div className='flex justify-center text-sm mt-10'>
-<a href="#!"  className=' uppercase px-5 text-black py-2 rounded-3xl bg-white' >View All Projects <span>arr</span> </a>
+<div className='flex justify-center text-sm  border-secondary border-t pt-10'>
+<Link href="/projects"  className=' uppercase flex items-center px-5 text-black py-2 rounded-3xl bg-white' >View All Projects <span className='ml-1 text-xs'><AiOutlineArrowRight/></span> </Link>
 </div>
 
 
@@ -380,7 +384,7 @@ return <a href='#!' className='bg-white uppercase px-7  py-2 rounded-2xl' >
 
 {/* SECTIONN STARTTTT */}
 
-<div className='mt-6'>
+<div className='mt-6 py-4'>
 
 <Whatweuse/>
 
@@ -398,7 +402,7 @@ return <a href='#!' className='bg-white uppercase px-7  py-2 rounded-2xl' >
 
 <div>
 
-<Getintouch/>
+<Getintouch number={4}/>
 
 
 </div>
@@ -413,7 +417,7 @@ return <a href='#!' className='bg-white uppercase px-7  py-2 rounded-2xl' >
 
 {/* SECTIONNN STARTTT */}
 
-<div className='pb-8'>
+<div >
 
 
 <Footer/>
@@ -432,6 +436,10 @@ return <a href='#!' className='bg-white uppercase px-7  py-2 rounded-2xl' >
 
 
 </div>
+
+
+
+</>
 
 
 

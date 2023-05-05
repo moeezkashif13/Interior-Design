@@ -1,6 +1,6 @@
 
 import { Footer, Navbar } from "@/components/smallcomponents";
-import anime from "animejs";
+
 import { useEffect } from "react";
 import { AiTwotoneMail } from "react-icons/ai";
 
@@ -10,29 +10,6 @@ import {FaMapMarkerAlt} from 'react-icons/fa'
 
 export default function Contactus(){
 
-
-    useEffect(()=>{
-
-
-        const common = {
-            easing: 'easeInOutQuad',
-        
-          } 
-        
-          anime({
-            targets: '.borderWidth',
-            width: '100%', // -> from '28px' to '100%',
-            ...common
-          });
-        
-          anime({
-            targets: '.borderHeight',
-            height: '100%', // -> from '28px' to '100%',
-            ...common
-          });
-
-
-    },[])
 
 
     return(
@@ -46,15 +23,15 @@ export default function Contactus(){
 
 <div className="pt-10 pb-6 md:pb-0 lg:pt-6 mt-10 lg:mt-12 lg:pb-6 relative lg:flex ">
 
-<div className=" absolute w-0 borderWidth h-[1px] bg-fourth top-0 left-0 "></div>
+<div className=" absolute w-full h-[1px] bg-fourth top-0 left-0 "></div>
 
-<div className=" absolute w-0 borderWidth h-[1px] bg-fourth bottom-0 left-0 "></div>
+<div className=" absolute w-full h-[1px] bg-fourth bottom-0 left-0 "></div>
 
 
 
 <div className="lg:w-1/2 lg:mr-8 lg:pr-8 relative ">
 
-<div className="hidden lg:block absolute w-[1px] h-0 borderHeight bg-fourth  top-0 right-0 "></div>
+<div className="hidden lg:block absolute w-[1px] h-full bg-fourth  top-0 right-0 "></div>
 
 
 
@@ -129,9 +106,9 @@ export default function Contactus(){
     
     `}>
         <label htmlFor="name" id="name"  >NAME*</label>
-        <input  type="text" className="text-[1.1rem]  bg-transparent outline-none placeholder:text-[#7E7E7E]  px-2 py-2  block w-full  rounded-sm focus:border    " placeholder="Enter your name" />
+        <input  type="text" className="text-[1.1rem]  bg-transparent outline-none placeholder:text-[#7E7E7E]  px-2 py-2  block w-full  rounded-sm focus:border border-secondary     " placeholder="Enter your name" />
 
-        <div className="absolute w-0 h-[1px] borderWidth bg-fourth bottom-0 left-0 "></div>
+        <div className="absolute w-full h-[1px]  bg-fourth bottom-0 left-0 "></div>
 
 
     </div>
@@ -141,9 +118,9 @@ export default function Contactus(){
 
 <div className="w-full text-primary relative">
         <label htmlFor="name" id="name">MESSAGE*</label>
-        <textarea  rows={8} className="text-[1.05rem]  bg-transparent outline-none  px-2 py-2  block w-full  rounded-sm focus:border placeholder:text-[#7E7E7E]  " placeholder="Type your message" />
+        <textarea  rows={8} className="text-[1.05rem]  bg-transparent outline-none  px-2 py-2  block w-full  rounded-sm focus:border border-secondary placeholder:text-[#7E7E7E]  " placeholder="Type your message" />
 
-        <div className="absolute w-0 h-[1px] borderWidth bg-fourth bottom-0 left-0 "></div>
+        <div className="absolute w-full h-[1px] bg-fourth bottom-0 left-0 "></div>
 
 
 

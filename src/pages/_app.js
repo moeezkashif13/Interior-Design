@@ -1,7 +1,11 @@
 import '@/styles/globals.css'
 
+import '@/styles/test.css'
+
 
 import localFont from 'next/font/local'
+import { useEffect } from 'react'
+
 
 
 const SatoshiFont = localFont({ src: './Satoshi-Variable.woff2', })
@@ -17,6 +21,13 @@ const SatoshiFont = localFont({ src: './Satoshi-Variable.woff2', })
 
 
 export default function App({ Component, pageProps }) {
+
+
+  // i ammmm checkingggg brrrooooooo
+
+
+
+
   return       <main className={SatoshiFont.className} >
 
   <Component {...pageProps} />

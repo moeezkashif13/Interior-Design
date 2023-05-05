@@ -208,6 +208,7 @@ Document
   margin-block-end: 0;
 }
 html {
+  background-color: #1D1D1D;
   font-family: sans-serif; /* 2 */
   /* line-height: 1.15;  */
   -webkit-text-size-adjust: 100%; /* 4 */
@@ -303,7 +304,7 @@ ol,
 ul,
 dl {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
 }
 ol ol,
 ul ul,
