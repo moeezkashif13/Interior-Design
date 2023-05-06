@@ -181,10 +181,10 @@ const text = "AT NEXT CONCEPT DESIGN, WE OFFER INTERIOR DESIGN AND TAILORED FURN
 </div>
 
 
-<div className='mt-12 w-full h-[450px] lg:h-[600px] rounded-lg '>
+<div className='mt-12 w-full h-[450px] lg:h-[600px] '>
 
-      <div className='h-full w-full'>
-        <img src='/tenth.webp' className='w-full h-full max-w-full object-cover' />
+      <div className='h-full w-full rounded-md'>
+        <img src='/tenth.webp' className='rounded-md w-full h-full max-w-full object-cover' />
       </div>
 
 

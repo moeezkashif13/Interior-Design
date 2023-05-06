@@ -283,8 +283,6 @@ lg: leading-8   font-semibold'>
 <div  className="md:w-1/2 overflow-y-scroll ourprocessscrollbar flex flex-col gap-y-5 mt-12
 
 
-bg-green-500
-
 
 
 
@@ -293,7 +291,7 @@ bg-green-500
     
 
 {[1,2,3,4,5].map(()=>{
-    return <div  className=" bg-blue-500 px-5 py-9 flex flex-col gap-y-4 border rounded-lg">
+    return <div  className=" px-5 py-9 flex flex-col gap-y-4 border rounded-lg">
 
 
     <div className="text-secondary text-5xl"><TfiRulerAlt/></div>

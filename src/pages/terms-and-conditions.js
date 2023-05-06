@@ -24,7 +24,7 @@ export default function TermsandConditions(){
 <Navbar/>
 
 
-<div className="lg:px-40 md:pt-6 lg:pt-12">
+<div className="lg:px-40 pt-6 lg:pt-12">
 
 {/*  */}
 <div className="flex flex-col gap-y-6 mt-2 ">
