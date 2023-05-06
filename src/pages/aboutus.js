@@ -7,6 +7,7 @@ import {FiArrowRight} from 'react-icons/fi'
 import {AiOutlineArrowRight} from 'react-icons/ai'
 import Link from 'next/link'
 import { useState } from 'react'
+import Head from 'next/head'
 
 
 export default function Aboutus(){
@@ -15,6 +16,17 @@ const [valueCheck,setValueCheck] = useState(0)
 
 
     return (
+
+    <>
+
+
+        <Head>
+
+<title>About | Interior Design Agency</title>
+
+</Head>
+
+
         <div className="bg-primary px-mobilePadding anothermobile:px-anothermobile md:px-tablet lg:px-desktopPadding text-primary">
 
 <Navbar/>
@@ -268,7 +280,7 @@ lg: leading-8   font-semibold'>
 
 
 
-<div  className="md:w-1/2 flex flex-col gap-y-5 mt-12
+<div  className="md:w-1/2 overflow-y-scroll ourprocessscrollbar flex flex-col gap-y-5 mt-12
 
 
 bg-green-500
@@ -279,18 +291,6 @@ bg-green-500
 
 ">
     
-
-    <div className="px-5 py-9 flex flex-col gap-y-4 border rounded-lg">
-
-
-    <div className="text-secondary text-5xl"><TfiRulerAlt/></div>
-    
-    
-    <p className="text-xl anothermobile:text-2xl font-semibold">MEASUREMENTS ON SITE</p>
-    
-    <p className='md:text-[1.05rem]'>The first stage of any successful project is to collect accurate information about the space. This is a crucial step in the design process as it allows us to understand the characteristics and limitations of the space and create a design that suits your needs and preferences.</p>
-    
-    </div>
 
 {[1,2,3,4,5].map(()=>{
     return <div  className=" bg-blue-500 px-5 py-9 flex flex-col gap-y-4 border rounded-lg">
@@ -380,6 +380,11 @@ bg-green-500
 
 
         </div>
+    
+    
+    </>
+    
+    
     )
 
 }

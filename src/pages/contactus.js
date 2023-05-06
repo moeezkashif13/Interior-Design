@@ -1,5 +1,7 @@
 
 import { Footer, Navbar } from "@/components/smallcomponents";
+import Head from "next/head";
+import Link from "next/link";
 
 import { useEffect } from "react";
 import { AiTwotoneMail } from "react-icons/ai";
@@ -10,9 +12,26 @@ import {FaMapMarkerAlt} from 'react-icons/fa'
 
 export default function Contactus(){
 
+    const inputFields = [
+
+        {label:'NAME'},
+        {label:'email'},
+        {label:'phone number'},
+        
+
+    ]
 
 
     return(
+
+<>
+
+<Head>
+
+<title>Contact us | Interior Design Agency</title>
+
+</Head>
+
 
         <div className="bg-primary px-mobilePadding anothermobile:px-anothermobile md:px-tablet   lg:px-desktopPadding text-primary">
 
@@ -94,7 +113,7 @@ export default function Contactus(){
 
 <div className="flex flex-col anothermobile:flex-row anothermobile:justify-between anothermobile:flex-wrap anothermobile:gap-x-4 gap-y-9 pt-16" > {/*  INPUT FIELDS CONTAINER starttt*/}
 
-{[1,2,3,4].map((elem,index)=>{
+{inputFields.map((elem,index)=>{
 
     return <div className={`w-full text-primary relative  ${index==0&&'anothermobile:w-[47%]'} ${index==1&&'anothermobile:w-[47%]'}  
     
@@ -105,8 +124,8 @@ export default function Contactus(){
     
     
     `}>
-        <label htmlFor="name" id="name"  >NAME*</label>
-        <input  type="text" className="text-[1.1rem]  bg-transparent outline-none placeholder:text-[#7E7E7E]  px-2 py-2  block w-full  rounded-sm focus:border border-secondary     " placeholder="Enter your name" />
+        <label htmlFor="name" id="name"  className="uppercase">{elem.label}*</label>
+        <input  type="text" className="  bg-transparent outline-none placeholder:text-[#7E7E7E]  px-2 py-2  block w-full  rounded-sm focus:border border-secondary     " placeholder={` Enter your ${elem.label.toLowerCase()}  `} />
 
         <div className="absolute w-full h-[1px]  bg-fourth bottom-0 left-0 "></div>
 
@@ -141,7 +160,7 @@ export default function Contactus(){
 
 
     <div  style={{transition:'all 0.3s'}} className="circle w-5 h-5 bg-transparent border  rounded-full"></div>
-    <p>I ACCEPT THE <a href="#!" className="underline">TERMS & CONDITIONS</a></p>
+    <p>I ACCEPT THE <Link href="/terms-and-conditions" className="underline">TERMS & CONDITIONS</Link></p>
 
 </div>
 
@@ -186,6 +205,9 @@ export default function Contactus(){
 
 
         </div>
+
+</>
+
 
     )
 

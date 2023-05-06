@@ -1,4 +1,5 @@
 import { Footer, Getintouch, HeroSectIntro, Navbar } from "@/components/smallcomponents";
+import Head from "next/head";
 import Link from "next/link";
 
 export const EachProject = ({nomargin,special,different,desktop,mid,left,right,reverse})=>{
@@ -50,9 +51,9 @@ ${special&&'lg:h-[25vw]'}
 
    
    `}>
-       <div className="w-full h-full  ">
+       <div className="w-full h-full overflow-hidden rounded-xl ">
 
-    <img src="/seventh.webp" className="rounded-xl w-full h-full max-w-full object-cover" alt=""  />
+    <img style={{transition:'all 0.4s'}} src="/seventh.webp" className="hover:scale-110 rounded-xl w-full h-full max-w-full object-cover" alt=""  />
 
        </div>
    </div>
@@ -81,6 +82,13 @@ export default function Projects(){
 
     return (
 
+        <>
+
+<Head>
+
+<title>Projects | Interior Design Agency</title>
+
+</Head>
 
         <div className="bg-primary px-mobilePadding anothermobile:px-anothermobile md:px-tablet   lg:px-desktopPadding text-primary">
 
@@ -103,7 +111,7 @@ export default function Projects(){
 
 
     <div className="lg:basis-2/6">
-    <Link href="/projects/sampleproject">  
+    <Link href="/projects/elegant-cashmere-kitchen">  
 
     <EachProject reverse={(index==1||index==3)&&true} left={true} desktop={true}  />
 </Link>
@@ -114,11 +122,11 @@ export default function Projects(){
     
     {/* <div className="hidden md:block  absolute top-12 left-[50%] w-[1px] h-full bg-fourth" style={{transform:'translateX(-50%)'}}></div> */}
   
-  <Link href="/projects/sampleproject">  
+  <Link href="/projects/elegant-cashmere-kitchen">  
     <EachProject reverse={(index==1||index==3)&&true} mid={true} desktop={true} different={true}  />
     </Link>
   
-  <Link href="/projects/sampleproject">
+  <Link href="/projects/elegant-cashmere-kitchen">
     <EachProject reverse={(index==1||index==3)&&true} right={true} desktop={true} different={true}  />
     
     </Link>
@@ -189,6 +197,8 @@ export default function Projects(){
 
 
 </div>
+
+</>
 
 
     )

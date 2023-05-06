@@ -1,4 +1,5 @@
 import { Footer, Getintouch, Navbar, SectionIntro } from "@/components/smallcomponents";
+import Head from "next/head";
 import Link from "next/link";
 import div from "next/link";
 import { useEffect } from "react";
@@ -22,24 +23,34 @@ useEffect(()=>{
 
 },[])
 
+const title = "Elegant cashmere kitchen"
 
     return(
-        
+       
+        <>
+
+        <Head>
+
+<title>{title} | Interior Design Agency</title>
+
+</Head>
+
+
         <div className="bg-primary px-mobilePadding anothermobile:px-anothermobile md:px-tablet   lg:px-desktopPadding text-primary">
 
 
 <Navbar/>
 
 
-<div className="py-8 border-t border-b border-secondary">
+<div className="py-8 lg:pt-16 border-t border-b border-secondary">
 
-<h1 className="text-[7vw] anothermobile:text-[5.7vw] lg:text-[6.2vw]  leading-[8vw] font-medium">ELEGANT CASHMERE KITCHEN</h1>
+<h1 className="uppercase text-[7vw] anothermobile:text-[5.7vw] lg:text-[6.2vw]  leading-[8vw] font-medium">{title}</h1>
 
 
-<div className=" h-[330px] md:h-[400px]  mt-8 mb-10">
+<div className=" h-[330px] md:h-[400px] lg:h-[600px]  mt-8 mb-10">
     <div className="w-full h-full ">
 
-        <img src="/first.webp" alt="" className="w-full max-w-full h-full object-cover rounded-xl" />
+        <img src="/sampleprojects.webp" alt="" className="w-full max-w-full h-full object-cover rounded-xl" />
 
     </div>
 </div>
@@ -102,7 +113,7 @@ ${index==0&&'lg:w-[48.5%]  anothermobile:h-[260px] md:h-[350px]'}
     rounded-xl`}>
         <div className="w-full h-full ">
 
-<img src="/eight.webp" alt="" className="w-full max-w-full h-full object-cover rounded-xl" />
+<img src="/thirteenth.webp" alt="" className="w-full max-w-full h-full object-cover rounded-xl" />
 
 </div>
     </div>
@@ -211,6 +222,8 @@ return <Link href="/projects" className="md:w-1/2">
 
 </div>
 
+
+</>
 
         
     )

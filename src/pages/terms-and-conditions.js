@@ -1,4 +1,5 @@
 import { Footer, Getintouch, Navbar } from "@/components/smallcomponents";
+import Head from "next/head";
 
 export default function TermsandConditions(){
 
@@ -6,6 +7,17 @@ export default function TermsandConditions(){
 
     
     return(
+
+        <>
+        
+        <Head>
+
+<title>Terms and Conditions | Interior Design Agency</title>
+
+</Head>
+        
+
+
         <div className="bg-primary px-mobilePadding anothermobile:px-anothermobile md:px-tablet   lg:px-desktopPadding text-primary">
 
 
@@ -160,6 +172,12 @@ export default function TermsandConditions(){
 
 
 </div>
+
+</>
+
+
+
+
     )
 
 }

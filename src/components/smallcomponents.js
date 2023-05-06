@@ -2,13 +2,13 @@ import Link from "next/link"
 import { AiOutlineArrowRight, AiOutlineRight } from "react-icons/ai"
 
 const MobileNavigation = ()=>{
-  return <div style={{transition:'all 0.4s'}} className="   mobileNavigation bg-secondary absolute py-12  left-0 rounded-lg w-full text-[#333] flex flex-col items-center gap-y-6 text-xl  -top-[800%]  ">
+  return <div style={{transition:'all 0.4s'}} className="   mobileNavigation bg-secondary absolute py-12  left-[50%] translate-x-[-50%] rounded-lg w-[90%] text-[#333] flex flex-col items-center gap-y-6 text-xl  -top-[800%]   lg:hidden  ">
 
   <Link href="/">HOME</Link>
   <Link href="/aboutus">ABOUT US</Link>
   <Link href="/projects">PROJECTS</Link>
 
-<Link className="px-5 py-1.5 border-secondary flex items-center text-[1rem] rounded-full border" href="/contactus">
+<Link className="px-5 py-1.5 border-secondary  flex items-center text-[1rem] rounded-full border" href="/contactus">
 
 GET IN TOUCH <span className="ml-2 text-xs "><AiOutlineArrowRight/></span>
 
@@ -21,7 +21,7 @@ GET IN TOUCH <span className="ml-2 text-xs "><AiOutlineArrowRight/></span>
 export const Navbar = ()=>{
   return <div className="pb-8 ">
 
-<div className='z-20 bg-primary  flex px-mobilePadding anothermobile:px-anothermobile md:px-tablet   lg:px-desktopPadding pt-3 pb-3 justify-between border-b border-secondary    fixed w-full left-0 mb-8'>
+<div className='z-20 bg-primary  flex items-center px-mobilePadding anothermobile:px-anothermobile md:px-tablet   lg:px-desktopPadding pt-3 pb-3 justify-between border-b border-secondary    fixed w-full left-0 mb-8'>
 
 
 <MobileNavigation/>
@@ -37,7 +37,7 @@ export const Navbar = ()=>{
 
 {/* DESKTOPP NAVIGATION STARTTT  */}
 
-<div className="flex gap-x-8 ml-auto mr-6  text-[14px] font-medium  items-center text-primary ">
+<div className="hidden   lg:flex gap-x-8 ml-auto mr-6  text-[14px] font-medium  items-center text-primary ">
   
   <Link className="pt-[2.5px]" href="/" >HOME</Link>
   <Link className="pt-[2.5px]" href="/aboutus" >ABOUT US</Link>
@@ -59,13 +59,13 @@ export const Navbar = ()=>{
 
 
 
-  <div  className="  px-1.5 py-1.5 rounded-full text-black flex gap-x-2 anothermobile:gap-x-3 border border-secondary text-xs anothermobile:text-[1.2rem] lg:text-sm">
+  {/* <div  className="  px-1.5 py-1.5 rounded-full text-black flex gap-x-2 anothermobile:gap-x-3 border border-secondary text-xs anothermobile:text-[1.2rem] lg:text-sm">
 
     <div className="px-3 md:px-5 lg:px-4 anothermobile:px-4 anothermobile:py-1   rounded-full  bg-secondary ">EN</div>
     <div className="px-3 md:px-5 lg:px-4 anothermobile:px-4 anothermobile:py-1   rounded-full  bg-secondary ">RO</div>
 
 
-  </div>
+  </div> */}
 
 
 
@@ -125,6 +125,17 @@ export const SectionIntro = ({number,text,columnOnDesktop,fullwidthparagraph,inc
 
 export const Whatweuse = ()=>{
 
+  const ourProducts = [
+
+    {image:'/whatweuse/first.svg',text:'HARDWARE'},
+    {image:'/whatweuse/second.svg',text:'MELAMINE BOARD'},
+    {image:'/whatweuse/third.svg',text:'MELAMINE MDF'},
+    {image:'/whatweuse/fourth.svg',text:'KITCHEN ACCESSORIES'},
+    {image:'/whatweuse/fifth.svg',text:'PAINTED / FOILED MDF'},
+
+  ]
+  
+
 return <div className='mt-6'>
 
 <SectionIntro  number={3} text="Materials  &  Products" includeSecond={true} secondSectHeading="WE USE THE BEST
@@ -132,19 +143,18 @@ return <div className='mt-6'>
 " />
 
 
-
 <div className='pt-16 pb-16' >
 
-{[1,2,3,4,5,].map(()=>{
+{ourProducts.map((eachProduct)=>{
 
 return <div className='py-4 flex items-center border-t border-b border-secondary'>
 
   <div className='w-32'>
-    <img src='https://uploads-ssl.webflow.com/63cc467bfbf4f5ebbd16107a/63cf1cfe15dd4e67846ff27c_Blum.svg'  className='rounded-lg w-full h-full object-cover max-w-full'   />
+    <img src={eachProduct.image}  className='rounded-lg w-full h-full object-cover max-w-full'   />
   </div>
 
 
-<p className='ml-auto uppercase text-primary'>HARDWARE</p>
+<p className='ml-auto text-sm font-medium text-secondary uppercase '>{eachProduct.text}</p>
 
 
 </div>
@@ -201,7 +211,7 @@ export const Footer = ()=>{
   return <div className='footerParent relative   mb-8 '>
 
 
-  <div className=' absolute w-0 borderWidth h-[1px] bg-fourth top-0'></div>
+  <div className=' absolute w-full h-[1px] bg-fourth top-0'></div>
 
 
   <div className=' hidden lg:block absolute w-[1px] h-full bg-fourth top-0 left-0'></div>
@@ -211,7 +221,7 @@ export const Footer = ()=>{
 
 
 
-  <div className=' absolute w-0 borderWidth h-[1px] bg-fourth bottom-0'></div>
+  <div className=' absolute w-full h-[1px] bg-fourth bottom-0'></div>
   
   
   
@@ -250,9 +260,9 @@ export const Footer = ()=>{
 
     
     <div className='mt-5 gap-y-4 w-[85%] flex flex-wrap  text-sm text-third '>
-      <span className='relative cursor-pointer hover:bg-white hover:left-2 hover:-top-0.5   transition-all px-3.5  py-1.5 border border-primary  rounded-2xl'>0748 775 027</span>
+      <a href="tel:0748775027" className='relative cursor-pointer hover:bg-white hover:left-2 hover:-top-0.5   transition-all px-3.5  py-1.5 border border-primary  rounded-2xl'>0748 775 027</a>
       
-      <span className='relative cursor-pointer hover:bg-white hover:left-2 hover:-top-0.5   transition-all px-3.5 py-1.5 border border-primary  rounded-2xl'>nextconcept.designn@gmail.com</span>
+      <a href="mailto:moeezkashif13@gmail.com" className='relative cursor-pointer hover:bg-white hover:left-2 hover:-top-0.5   transition-all px-3.5 py-1.5 border border-primary  rounded-2xl'>nextconcept.design@gmail.com</a>
       </div>
     
     
@@ -267,9 +277,9 @@ export const Footer = ()=>{
     <p className='uppercase  text-[1rem] lg:text-lg text-primary'>Social links</p>
     
     <div className='mt-5 gap-y-4 gap-x-4 w-full lg:w-[65%] flex flex-wrap  text-sm text-third '>
-      <span className='relative cursor-pointer hover:bg-white hover:left-2 hover:-top-0.5   transition-all px-5  py-1.5 border border-primary  rounded-2xl'>Instagram</span>
+      <a href="https://instagram.com/moeezkashif13" target={"_blank"} className='relative cursor-pointer hover:bg-white hover:left-2 hover:-top-0.5   transition-all px-5  py-1.5 border border-primary  rounded-2xl'>Instagram</a>
       
-      <span className='relative cursor-pointer hover:bg-white hover:left-2 hover:-top-0.5   transition-all px-5  py-1.5 border border-primary  rounded-2xl'>Facebook</span>
+      <a href="https://www.facebook.com/abdulmoeez121367" target={"_blank"} className='relative cursor-pointer hover:bg-white hover:left-2 hover:-top-0.5   transition-all px-5  py-1.5 border border-primary  rounded-2xl'>Facebook</a>
       </div>
     
     

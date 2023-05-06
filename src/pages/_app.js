@@ -1,6 +1,6 @@
 import '@/styles/globals.css'
 
-import '@/styles/test.css'
+import '@/styles/extraStyles.css'
 
 
 import localFont from 'next/font/local'

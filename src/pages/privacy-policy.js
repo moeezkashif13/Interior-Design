@@ -1,40 +1,24 @@
 import { Footer, Getintouch, Navbar } from "@/components/smallcomponents";
+import Head from "next/head";
 
-import { useEffect } from "react";
 
-const { gsap } = require("gsap/dist/gsap");
-const { ScrollTrigger } = require("gsap/dist/ScrollTrigger");
 
 export default function PrivacyPolicy(){
-
-
-    useEffect(()=>{
-
-        gsap.registerPlugin(ScrollTrigger);
-
-
-        gsap.to(".borderWidth",{
-
-            width:'100%',
-            duration:4,
-
-            scrollTrigger:{
-                trigger:".footerParent",
-                markers:true,
-
-                // start:"100px"
-
-            }
-
-        })
-
-
-    },[])
 
 
 
 
     return(
+
+        <>
+
+<Head>
+
+<title>Privacy Policy | Interior Design Agency</title>
+
+</Head>
+
+
         <div className="bg-primary px-mobilePadding anothermobile:px-anothermobile md:px-tablet   lg:px-desktopPadding text-primary">
 
 
@@ -325,6 +309,10 @@ export default function PrivacyPolicy(){
 
 
 </div>
+
+</>
+
+
     )
 
 }

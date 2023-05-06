@@ -126,11 +126,9 @@ const text = "AT NEXT CONCEPT DESIGN, WE OFFER INTERIOR DESIGN AND TAILORED FURN
 
 <Head>
 
-    <title>Apna Page  {new Date().getMonth()} </title>
-
+<title>Homepage | Interior Design Agency</title>
 
 </Head>
-
 
 
     <div className="bg-primary px-mobilePadding anothermobile:px-anothermobile md:px-tablet   lg:px-desktopPadding text-primary">
@@ -183,7 +181,14 @@ const text = "AT NEXT CONCEPT DESIGN, WE OFFER INTERIOR DESIGN AND TAILORED FURN
 </div>
 
 
-<div className='mt-12 w-full h-[450px] lg:h-[600px] rounded-lg  bg-orange-500'></div>
+<div className='mt-12 w-full h-[450px] lg:h-[600px] rounded-lg '>
+
+      <div className='h-full w-full'>
+        <img src='/tenth.webp' className='w-full h-full max-w-full object-cover' />
+      </div>
+
+
+</div>
 
 
 
